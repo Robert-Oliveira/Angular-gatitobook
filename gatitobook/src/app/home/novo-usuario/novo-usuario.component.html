@@ -46,6 +46,11 @@
       *ngIf="novoUsuarioForm.get('userName')?.errors?.['minusculo'] && novoUsuarioForm.get('userName')?.touched"
       mensagem="Usuário deve ser em letra minúsculo"
     ></app-mensagem>
+    <app-mensagem
+      *ngIf="novoUsuarioForm.get('userName')?.errors?.['usuarioExistente']"
+      mensagem="Usuário já existe"
+    >
+    </app-mensagem>
   </div>
   <div class="mb-3">
     <input
